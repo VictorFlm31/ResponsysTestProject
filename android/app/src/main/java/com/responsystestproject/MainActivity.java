@@ -1,4 +1,4 @@
-package com.responsystestproject;
+package br.com.redeipiranga.debug;
 
 import com.facebook.react.ReactActivity;
 
