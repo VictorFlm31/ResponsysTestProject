@@ -12,7 +12,6 @@
   "dependencies": {
     "@react-native-firebase/app": "15.0.0",
     "@react-native-firebase/messaging": "15.0.0",
-    "@oracle/react-native-pushiomanager": "6.52.1",
     "react": "16.13.1",
     "react-native": "0.63.4"
   },

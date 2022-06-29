@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {useEffect} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,33 +24,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import { Platform } from 'react-native';
-import PushIOManager from '@oracle/react-native-pushiomanager';
-
-const App = () => {
-
-  useEffect(() => {
-    PushIOManager.configure("pushio_config.json", (error, response) => {
-       console.log("configurado:", response);
-
-      if (Platform.OS === 'android') {
-        PushIOManager.registerApp(true, (error, response) => {
-          console.log("registrado android:", response);      
-          });
-      } else {
-        PushIOManager.registerForAllRemoteNotificationTypes((error, response) => {
-          console.log("registradoAllRemotesIOS:", response);   
-          PushIOManager.registerApp(true, (error, response) => {
-            console.log("configurado IOS:", response);  
-          });  
-        });
-      }
-    });
-    
-
-
-  }, [])
-  
+const App = () => {  
+      
 
   return (
     <>
